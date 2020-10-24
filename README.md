@@ -1,2 +1,2 @@
 # ComplexApp
-A complex application made using JavaScript
+A complex application made using JavaScript.
