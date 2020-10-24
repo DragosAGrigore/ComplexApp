@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "autocompile": "nodemon app"
+    "autocompile": "nodemon db"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "mongodb": "^3.6.2",
     "nodemon": "^2.0.6",
     "validator": "^13.1.17"
   }
