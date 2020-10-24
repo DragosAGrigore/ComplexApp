@@ -1,9 +1,10 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const mongodb = require('mongodb');
-const config = require('./config');
 
-const connectionString = `mongodb+srv://${config.username}:${config.password}@cluster0.ray9g.mongodb.net/ComplexApp` 
+const connectionString = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.ray9g.mongodb.net/ComplexApp` 
 mongodb.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, client) {
     module.exports = client.db();
     const app = require('./app');
-    app.listen(3000);
+    app.listen(process.env.PORT);
 });
