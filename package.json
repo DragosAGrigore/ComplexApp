@@ -4,7 +4,8 @@
   "description": "A complex application made using JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "autocompile": "nodemon app"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/DragosAGrigore/ComplexApp/issues"
   },
-  "homepage": "https://github.com/DragosAGrigore/ComplexApp#readme"
+  "homepage": "https://github.com/DragosAGrigore/ComplexApp#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
 }
