@@ -2,11 +2,13 @@
 A complex application made using JavaScript.
 
 # Technologies
-Node.js
-MongoDB
-Express
-Nodemon
-Ejs
-Dotenv
-Validator
-Bcryptjs
+* Node.js
+* MongoDB
+* Connect-mongo
+* Express
+* Express-session
+* Nodemon
+* Ejs
+* Dotenv
+* Validator
+* Bcryptjs
