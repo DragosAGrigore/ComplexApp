@@ -1,18 +1,21 @@
-const e = require('express');
 const User = require('../models/User');
 
 exports.login = function(req, res) {
     let user = new User(req.body);
     user.login().then(function(result) {
         req.session.user = { username: user.data.username };
-        res.send(result);
+        req.session.save(function() {
+            res.redirect('/');
+        });
     }).catch(function(error) {
         res.send(error);
     });
 };
 
 exports.logout = function(req, res) {
-    
+    req.session.destroy(function() {
+        res.redirect('/');
+    });
 };
 
 exports.register = function(req, res) {
