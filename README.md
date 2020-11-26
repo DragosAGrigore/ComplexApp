@@ -12,3 +12,4 @@ A complex application made using JavaScript.
 * Dotenv
 * Validator
 * Bcryptjs
+* Connect-flash

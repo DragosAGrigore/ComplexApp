@@ -2,6 +2,7 @@ const router = require('./router');
 const express = require('express');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
+const flash = require('connect-flash');
 const app = express();
 
 let sessionOptions = session({
@@ -14,8 +15,8 @@ let sessionOptions = session({
         httpOnly: true
     }
 });
-
 app.use(sessionOptions);
+app.use(flash());
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json());
 
