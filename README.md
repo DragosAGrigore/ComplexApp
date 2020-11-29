@@ -13,3 +13,4 @@ A complex application made using JavaScript.
 * Validator
 * Bcryptjs
 * Connect-flash
+* Md5
