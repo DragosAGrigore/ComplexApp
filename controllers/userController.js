@@ -1,3 +1,4 @@
+const Post = require('../models/Post');
 const User = require('../models/User');
 
 exports.mustBeLoggedIn = function(req, res, next) {
@@ -75,8 +76,13 @@ exports.ifUserExists = function(req, res, next) {
 };
 
 exports.profilePostsScreen = function(req, res) {
-    res.render('profile', { 
-        profileUsername: req.profileUser.username,
-        profileAvatar: req.profileUser.avatar
+    Post.findByAuthorId(req.profileUser._id).then(function(posts) {
+        res.render('profile', { 
+            profileUsername: req.profileUser.username,
+            profileAvatar: req.profileUser.avatar,
+            posts: posts
+        });
+    }).catch(function() {
+        res.render('404');
     });
 };
